@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # end
 
   resources :students do
-    resources :admin
+    resources :activate
   end
   #get "students/:id", to: "students#show"
   # scope 'activate' do
