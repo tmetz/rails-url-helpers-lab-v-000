@@ -12,11 +12,12 @@ Rails.application.routes.draw do
   #   resources :students
   # end
 
-  resources :students do
-    resources :activate
-  end
+  # resources :students do
+  #   resources :activate
+  # end
   #get "students/:id", to: "students#show"
   # scope 'activate' do
   #   patch "students/:id/activate", to: "students#update", as: "activate_students"
   # end
+  patch "students/:id/activate", to: "students#update", as: "activate_students"
 end
