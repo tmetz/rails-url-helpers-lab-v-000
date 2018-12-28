@@ -11,15 +11,8 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find_by_id(params[:id])
-    #@student.toggle!(:active)
-    #@student.update(active: !@student.active?)
-    if @student.active?
-      puts "switching to false"
-      @student.update(active: false)
-    else
-      puts "switching to true"
-      @student.update(active: true)
-    end
+    @student.toggle!(:active)
+    @student.update(active: !@student.active?)
     redirect_to student_path(@student)
   end
 
