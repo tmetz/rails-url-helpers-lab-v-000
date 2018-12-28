@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   # scope 'activate' do
   #   patch "students/:id/activate", to: "students#update", as: "activate_students"
   # end
-  patch "students/:id/activate", to: "students#update", as: "activate_students"
+  patch "students/:id/activate", to: "students#update", as: "activate_student"
 end
