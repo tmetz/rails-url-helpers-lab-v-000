@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   # namespace :activate do
   #   resources :students
   # end
-  scope '/admin' do
-    resources :students
+  # scope '/admin' do
+  #   resources :students
+  # end
+
+  resources :students do
+    resources :admin
   end
   #get "students/:id", to: "students#show"
   # scope 'activate' do
